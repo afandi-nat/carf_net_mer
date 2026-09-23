@@ -288,26 +288,23 @@ tools/            synthetic-data generator, smoke test, checkpoint verifier
 
 ## Acknowledgements and license
 
-This work builds on **"Mimicking the Annotation Process for Recognizing the
-Micro Expressions"** (Ruan, Lo, Shuai and Cheng, ACM MM 2022) — the dual-branch
-design, the AU-similarity contrastive loss and the region-exchange augmentation
-come from that work. Motion magnification uses the PyTorch re-implementation of
-Oh et al. (2018), `kaist-ami/Deep-Motion-Mag-Pytorch`. Landmarks use the LBF
-model from `kurnianggoro/GSOC2017`; face detection uses OpenCV YuNet.
+This repository is the reference implementation of **CARF-Net**, released
+alongside our manuscript. The paper is not published yet; once it appears,
+please cite it when you use this code in academic work. Author and citation
+details are in `CITATION.cff`.
 
-> **Before publishing:** this repository is a derivative of the ACM MM 2022
-> code base, which does not state a license. Confirm the terms with its authors
-> and add a `LICENSE` file before releasing. Dataset annotations and frames must
-> not be committed — `.gitignore` already excludes `*.xlsx` and `labels/`.
+The implementation draws on prior open-source work in micro-expression
+recognition, and is built with the following components, each used under its
+own license: PyTorch and torchvision, OpenCV (contrib modules, for TV-L1
+optical flow and facial landmark fitting), NumPy, pandas, scikit-learn, Pillow
+and tqdm. Pretrained face-detection, landmark and motion-magnification models
+are fetched from their original distributors on first use and are **not**
+redistributed here.
 
-If you use this code, please cite the CARF-Net paper (see `CITATION.cff`, fill
-in your details) and the ACM MM 2022 paper:
+The datasets are third-party and licensed. Obtain them from their owners and
+follow the terms of their release agreements. No frames or annotations are
+included in this repository, and `.gitignore` excludes `*.xlsx` and `labels/`
+so they cannot be committed by accident.
 
-```bibtex
-@inproceedings{ruan2022mimicking,
-  title     = {Mimicking the Annotation Process for Recognizing the Micro Expressions},
-  author    = {Ruan, Bo-Kai and Lo, Ling and Shuai, Hong-Han and Cheng, Wen-Huang},
-  booktitle = {ACM International Conference on Multimedia},
-  year      = {2022}
-}
-```
+**License:** not yet decided. Add a `LICENSE` file before making the repository
+public.
