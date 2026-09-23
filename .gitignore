@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Model files fetched on first use
+weights/
+third_party/
+
+# Pipeline outputs
+labels/
+runs/
+logs/
+processed/
+*.npy
+*.pt
+
+# Annotation files are licensed and must not be committed
+*.xlsx
+tools/.sample_face.jpg
+
+.DS_Store
+.idea/
+.vscode/

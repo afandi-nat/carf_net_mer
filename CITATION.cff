@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the CARF-Net paper and the prior work it builds on."
+title: "CARF-Net: Class-Aware Region Fusion Network for micro-expression recognition"
+authors:
+  - family-names: "TODO"
+    given-names: "TODO"
+repository-code: "https://github.com/TODO/carf-net"
+license: "TODO"
+references:
+  - type: conference-paper
+    title: "Mimicking the Annotation Process for Recognizing the Micro Expressions"
+    authors:
+      - family-names: "Ruan"
+        given-names: "Bo-Kai"
+      - family-names: "Lo"
+        given-names: "Ling"
+      - family-names: "Shuai"
+        given-names: "Hong-Han"
+      - family-names: "Cheng"
+        given-names: "Wen-Huang"
+    collection-title: "ACM International Conference on Multimedia"
+    year: 2022

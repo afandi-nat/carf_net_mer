@@ -1,0 +1,16 @@
+# PyTorch is installed separately so the CUDA build matches your machine:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#
+# Exactly ONE OpenCV package must be installed, and it must be the contrib
+# build: TV-L1 optical flow (cv2.optflow) and Facemark LBF (cv2.face) live there.
+#   pip uninstall -y opencv-python opencv-python-headless opencv-contrib-python
+#   pip install "opencv-contrib-python<5"
+
+opencv-contrib-python>=4.8,<5
+numpy>=1.24,<3
+pandas>=2.0
+scikit-learn>=1.3
+scipy>=1.10
+Pillow>=10.0
+openpyxl>=3.1
+tqdm>=4.65
