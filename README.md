@@ -222,24 +222,6 @@ UAR (macro recall). Defaults:
 Override through the environment: `EPOCHS=100 SEEDS=0 bash scripts/run.sh samm train`,
 or call `python -m carfnet.train --help` directly.
 
-### Checkpoint-selection protocols
-
-`--protocols` chooses which are computed, and several can be reported side by side.
-
-| protocol | how the reported weights are chosen | sees the test fold |
-|---|---|---|
-| `test_peek` | best epoch on the held-out subject | **yes** |
-| `ema` | EMA of the weights, last epoch; no selection | no |
-| `last` | last epoch; no selection | no |
-| `inner` | best epoch on held-out training subjects (`--inner-holdout`) | no |
-
-`test_peek` is the default because it matches the protocol used by the prior
-work this code builds on, which is what published numbers can be compared
-against. It does let the test fold influence which weights are reported, so
-**state the protocol explicitly when reporting results**. Running
-`--protocols test_peek,ema` costs one training run and reports both, and the gap
-between them measures directly what that selection is worth on your data.
-
 ---
 
 ## Checkpoints and Grad-CAM
