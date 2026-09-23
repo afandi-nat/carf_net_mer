@@ -12,7 +12,6 @@ single registry file and exposes the dataset as a command-line argument:
 bash scripts/run.sh casme2 full
 bash scripts/run.sh samm   full
 bash scripts/run.sh casme3 full
-bash scripts/run.sh casme2,samm,casme3 train   # combined, LOSO across all subjects
 ```
 
 Everything downstream — cropping, alignment, optical flow, training, evaluation
